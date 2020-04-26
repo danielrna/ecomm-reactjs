@@ -4,6 +4,7 @@ import logo from '../logo.svg'
 import { ButtonContainer } from './Button'
 import styled from 'styled-components'
 import { ShoppingCartOutlined } from '@ant-design/icons'
+import { ProductConsumer } from '../context'
 
 export default class Navbar extends Component {
   render() {
@@ -24,11 +25,15 @@ export default class Navbar extends Component {
         <Link className="ml-auto" to="/cart">
           <ButtonContainer>
             <div className="rowC">
-            <div>
-              <div className="cartCount">1</div>
-             <ShoppingCartOutlined />
-            </div>
-             <div className="cartText">Panier</div> 
+              <div>
+                <div className="cartCount">
+                  <ProductConsumer>
+                    {(value) => value.cart.length}
+                  </ProductConsumer>
+                </div>
+                <ShoppingCartOutlined />
+              </div>
+              <div className="cartText">Panier</div>
             </div>
           </ButtonContainer>
         </Link>
