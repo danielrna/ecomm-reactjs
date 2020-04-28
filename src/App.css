@@ -42,10 +42,11 @@ font-size: 1.5em;
 
 .cart-icon {
   cursor: pointer;
-  font-size: 1.2rem;
-  color: var(--mainYellow);
+  font-size: 1.5rem;
 }
 
 .rowC{display:flex; flex-direction:row;align-items: center;}
 .cartCount{margin-bottom: -0.7em;}
-.cartText{margin-left: 0.1em;font-size: 1;}
+.cartText{margin-left: 0.1em;font-size: 1;font-weight: bold;}
+.navBar{background-color: #595857;}
+.navbar .nav-link {color: var(--mainWhite);font-weight: bold;}

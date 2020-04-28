@@ -111,7 +111,7 @@ const ProductWrapper = styled.div`
       transform: translate(0,0);
     }
     .cart-btn:hover{
-      color: var(--mainBlue);
+      color: var(--mainWhite);
       cursor: pointer;
     }
 `;

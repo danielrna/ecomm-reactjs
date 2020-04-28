@@ -9,7 +9,7 @@ import { ProductConsumer } from '../context'
 export default class Navbar extends Component {
   render() {
     return (
-      <nav className="navbar navbar-expand-sm bg-primary navbar px-sm-5">
+      <nav className="navbar navbar-expand-sm navBar navbar px-sm-5">
         <Link to="/">
           <img src={logo} alt="store" className="navbar-brand" />
         </Link>
@@ -31,7 +31,7 @@ export default class Navbar extends Component {
                     {(value) => value.cart.length}
                   </ProductConsumer>
                 </div>
-                <ShoppingCartOutlined />
+                <ShoppingCartOutlined className="cart-icon"/>
               </div>
               <div className="cartText">Panier</div>
             </div>
@@ -42,13 +42,3 @@ export default class Navbar extends Component {
     )
   }
 }
-
-
-const NavbarWrapper = styled.nav`
-    background: var(--mainBlue);
-    .nav-link {
-      color: var(--mainWhite) !important;
-      font-size: 1.3rem;
-      text-transform: capitalize;
-    }
-`
